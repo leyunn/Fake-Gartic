@@ -1,0 +1,7 @@
+@import '~antd/dist/antd.css';
+
+body {
+  background-color: rgb(121, 199, 137);
+  overflow-y: hidden;
+}
+

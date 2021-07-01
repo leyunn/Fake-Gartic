@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backend</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="all"><div id="col">
+      <div id="problems-view">
+        <!-- <div class="problem">test1</div> -->
+      </div>
+    <div id="problems-inputs">
+    <input id="problems-input" placeholder="enter new problem" />
+    <button id="button">create</button>
+    </div></div>
+    <!-- <div id="monitor"></div> -->
+    </div>
+    
+    <script>
+      const listDOM = document.getElementById('problems-view');
+      // const monitorDOM = document.getElementById('monitor');
+      const inputDOM = document.getElementById('problems-input');
+      const buttonDOM = document.getElementById('button');
+      let problems = [];
+      const server = new WebSocket('ws://localhost:8080');
+      server.sendEvent =  (e) => server.send(JSON.stringify(e));
+      server.onopen = () => {
+        console.log('monitor: Server connected.')
+        server.sendEvent({type: 'GETPROBLEM',data: {}});
+      }
+      server.onmessage = (m) => {
+        onEvent(JSON.parse(m.data))
+      };
+
+      buttonDOM.addEventListener("click",()=> {
+        console.log("click")
+        if (inputDOM.value && !(inputDOM.value.includes(" "))) {
+          console.log("sent");
+          server.sendEvent({type: 'ADDPROBLEM',data: { answer: inputDOM.value}})
+          inputDOM.value="";
+        } 
+      });
+
+      const deleteP = (e) =>{
+        console.log(e.target)
+      }
+
+
+      const createList = (list) => {
+        problems =[...list]
+        problems.forEach(n => {
+          const newEle = document.createElement('div');
+          newEle.innerHTML = n;
+          newEle.classList.add("problem");
+          newEle.onclick = deleteP;
+          listDOM.appendChild(newEle);
+        });
+      };
+
+      const onEvent = (e) => {
+        const { type } = e;
+        console.log("receive", e);
+        switch (type) {
+          case 'ADDPROBLEM': {
+            if(e.data.answer=="") break;
+            problems.push(e.data.answer);
+            const newEle = document.createElement('div');
+            newEle.innerHTML = e.data.answer;
+            newEle.classList.add("problem");
+            newEle.onclick = deleteP;
+            listDOM.appendChild(newEle);
+            break;
+          }
+          case 'GETPROBLEM': {
+            createList(e.data.answers);
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

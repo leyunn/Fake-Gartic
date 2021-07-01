@@ -1,0 +1,245 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.PlayScreen{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 1010px;
+  height: 622px;
+  margin:auto;
+  margin-top: 60px;
+}
+
+.UserList-view{
+  flex: 1;
+  background-color: azure;
+  margin: 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 647px;
+  /* align-items: stretch; */
+}
+
+.userbox{
+  /* flex: 1; */
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(214, 231, 214);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  /* justify-items: center; */
+}
+
+.myuserbox{
+  /* flex: 1; */
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(168, 235, 188);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  /* justify-items: center; */
+}
+
+.userbox_score{
+  font-size: 14px;
+  /* width: 120px; */
+  text-align: left;
+}
+
+.userbox_name{
+  font-size: 20px;
+  margin: 10px;
+  /* width: 120px; */
+  text-align: left;
+}
+
+.userbox_avatar{
+  margin: 15px;
+}
+
+.LogIn-avatar{
+  margin-bottom: 20px;
+  margin-left: 29px;
+}
+
+.CanvasAndChat-view{
+  flex: 2;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.Canvas{
+  background-color:azure;
+  flex:2;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.Display{
+  background-color:azure;
+  flex:2;
+  margin: 10px;
+  border-radius: 10px;
+  padding-top:140px;
+}
+
+.Chat{
+  flex:1;
+  /* height: 300px; */
+  background-color: azure;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.LogIn-view{
+  background-color: azure;
+  width:  350px;
+  height: 421px;
+  border-radius: 10px;
+  margin:auto;
+  margin-top: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.LogIn-title{
+  font-family: ComicSansMS;
+  font-size: 60px;
+}
+
+.LogIn-name{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.Chat-messages{
+  margin: 5px;
+  border-radius: 5px;
+  height: 140px;
+  /* background-color: rgb(233, 233, 233); */
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(218, 218, 219);
+  overflow-y: scroll;
+}
+
+img{
+  transition: 0.3s;
+}
+
+img:hover{
+  opacity: 0.5;
+}
+
+#color_picker{
+  border: 0;
+  background-color: transparent;
+  height: 30px;
+}
+
+.icon{
+  margin: 10px;
+}
+
+.toolbar{
+  background-color:rgb(224, 223, 215);
+  border-radius: 5px;
+  width: 220px;
+  height: 50px;
+  position:relative;
+  left: 10px;
+  bottom:10px;
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+}
+
+#searchBar{
+  margin-left: 1px;
+  border-radius: 5px;
+}
+
+.correctFont{
+  color: #52c41a;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.guessFont{
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.progress{
+  margin: 20px;
+}
+
+.chatleft{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatright{
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 220px;
+}
+
+.displayTitle{
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: ComicSansMS;
+}
+.displayText{
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 20px; 
+}
+
+.word{
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.check{
+  margin-left: 20px;
+  margin-top: 30px;
+
+}
+
+.trophy{
+  margin-left: 20px;
+  margin-top: 30px;
+  color: #e4d613;
+}

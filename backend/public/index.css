@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+#problems-view{
+    margin-top: 30px;
+    margin-left:40px;
+    height: 600px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+#monitor{
+    margin-top: 30px;
+    margin-left:200px;
+    height: 500px;
+    width: 800px;
+    background-color: rgb(61, 60, 60);
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: black; */
+    overflow-y: scroll;
+}
+
+#problems-inputs{
+    margin-top: 10px;
+    margin-left:40px;
+}
+
+#problems-input{
+    width: 230px;
+    height: 30px;;
+}
+#all{
+    display: flex;
+    flex-direction: row;
+}
+
+#col{
+    display: flex;
+    flex-direction: column;
+}
+
+.problem{
+   width: 120px;
+   height: 25px;
+   margin-top: 10px;
+   margin-left: 10px;
+   background-color: rgb(41, 42, 41);
+    color: white;
+    padding-left: 15px;
+    padding-top: 5px;
+}
