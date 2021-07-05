@@ -1,5 +1,7 @@
 ## Fake Gartic
 
+![alt text](demo_pic.png)
+
 - #### 作者
 
   - ###### Alex Lai (https://github.com/Alx-Lai)
