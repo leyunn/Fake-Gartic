@@ -1,5 +1,7 @@
 ## Fake Gartic
 
+A MERN stack application that reproduce the multiplayer real-time drawing/guessing game - Gartic.io.
+
 ![alt text](demo_pic.png)
 
 - #### 作者
